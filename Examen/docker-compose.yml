@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  servidordbh:
+    image: mariadb:10.7.1
+    container_name: servidordbh
+    environment:
+      - MYSQL_ROOT_PASSWORD=slkd56fhsi298
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./dbconfig:/etc/mysql/conf.d
+    ports:
+      - 3334:3306
